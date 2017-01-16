@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * Created by androiddevelopment on 16.1.17..
  */
-//@DatabaseField(tableName = "knjiga")
+@DatabaseTable(tableName = "knjiga")
 public class Knjiga {
     public static final String POLJE_NASLOV = "naslov";
     public static final String POLJE_BROJ_STRANA = "broj strana";
@@ -27,7 +27,7 @@ public class Knjiga {
 
     private boolean prisutna;
 
-    @ForeignCollectionField(foreignFieldName = "jelo")
+    @ForeignCollectionField(foreignFieldName = "oblasti")
     private ForeignCollection<Oblast> oblasti;
 
     public Knjiga(int id, int brojStrana, String naslov, Date datumIzdanja, boolean prisutna) {
