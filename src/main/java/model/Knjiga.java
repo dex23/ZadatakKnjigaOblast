@@ -27,7 +27,7 @@ public class Knjiga {
 
     private boolean prisutna;
 
-    @ForeignCollectionField(foreignFieldName = "oblasti")
+    @ForeignCollectionField(foreignFieldName = "knjiga")
     private ForeignCollection<Oblast> oblasti;
 
     public Knjiga(int id, int brojStrana, String naslov, Date datumIzdanja, boolean prisutna) {
