@@ -1,6 +1,8 @@
 package model;
 
+import com.j256.ormlite.dao.ForeignCollection;
 import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 import java.util.Date;
 
@@ -24,6 +26,9 @@ public class Knjiga {
     private Date datumIzdanja;
 
     private boolean prisutna;
+
+    @ForeignCollectionField(foreignFieldName = "jelo")
+    private ForeignCollection<Oblast> oblasti;
 
     public Knjiga(int id, int brojStrana, String naslov, Date datumIzdanja, boolean prisutna) {
         this.id = id;
